@@ -1,0 +1,162 @@
+:root{
+    --mainBackground:hsl(222, 26%, 31%);
+    --themeSelBck:hsl(223, 31%, 20%);
+    --screenBackground:hsl(224, 36%, 15%);
+    --resetKeyBackground:hsl(225, 21%, 49%);
+    --resetKeyShadow:hsl(224, 28%, 35%);
+    --enterKeyBackground:hsl(6, 63%, 50%);
+    --enterKeyShadow:hsl(6, 70%, 34%);
+    --keyBackground:hsl(30, 25%, 89%);
+    --keyShadow:hsl(28, 16%, 65%);
+    --keyText:hsl(221, 14%, 31%);
+    --otherText:white;
+    --resultText:white;
+}
+body{
+    width:100vw;
+    height:100vh;
+    padding:10px 0;
+    margin:0;
+    background-color:var(--mainBackground);
+    font-family:"Spartan";
+
+}
+.calc-body{
+    width:30%;
+    height:auto;
+    margin:auto auto;
+}
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:var(--resultText);
+}
+.calc-logo h1{
+    margin:0;
+}
+.theme{
+    display:flex;
+    align-items: center;
+}
+.theme p{
+    margin:0;
+    padding:0;
+    align-self: flex-end;
+    font-size:8px;
+    text-transform: uppercase;
+    font-weight: 600;    
+}
+.theme-changer{
+    display:flex;
+    flex-direction: column;
+    align-items:right;
+    margin-left:10px;       
+}
+.theme-changer ul{
+    list-style-type:none;
+    display:flex; 
+    margin:0;
+    padding:0; 
+    font-size:8px;
+    justify-content:space-between;
+    font-weight: 500;      
+}
+.theme-changer ul li{
+    margin-left: 7px;
+}
+#themeSelectorBack{
+    background-color:var(--themeSelBck);
+    /* border:1px black solid; */
+    height:10px;
+    width:40px;
+    border-radius:7px;
+    position:relative;
+    padding:2px 2px;
+    cursor:pointer;
+    
+}
+#themeSelector{
+    width:10px;
+    height:10px;
+    position:absolute;
+    background-color:var(--enterKeyBackground);
+    border-radius: 50%;
+        
+    
+}
+.main-result{
+    width:100%;
+    background-color:var(--screenBackground);
+    height:100px;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+    margin-top: 0px;
+}
+.main-result p{
+    color:var(--resultText);
+    position:absolute;
+    text-align:right;
+    right:0;
+    bottom:0;
+    margin:0 20px 20px 0;
+    font-size:40px;
+    font-weight:700;
+}
+.history{
+    width:100%;
+    background-color:var(--screenBackground);
+    height:50px;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    margin-top: 30px;
+    padding:10px 20px;
+    box-sizing: border-box;
+}
+.history p{
+    text-align:right;
+    color:var(--resultText);
+    font-weight:300;
+}
+.keypad{
+    margin-top:30px;
+    padding:10px;    
+    border-radius:8px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill, 23.5%);    
+    grid-gap:2%;
+    height:390px;
+    background-color:var(--themeSelBck);
+}
+.btn{
+    width:100%;
+    height:60px;
+    border-radius: 10%;
+    font-size:150%;
+    font-weight:700;
+    color:var(--keyText);
+    background-color:var(--keyBackground);
+    box-shadow: 0px 4px var(--keyShadow);
+    border-style: none;
+    margin-top:10px;
+    cursor:pointer;
+}
+#RESET{
+    grid-area:6/1/5/3;
+}
+#resolve{
+    grid-area:6/3/5/5;
+}
+.blue, .red{
+    font-size:100%;
+}
+.red{
+    background-color:var(--enterKeyBackground);
+    box-shadow: 0px 4px var(--enterKeyShadow);
+    color:var(--otherText);
+}
+.blue{
+    background-color:var(--resetKeyBackground);
+    box-shadow: 0px 4px var(--resetKeyShadow);
+    color:var(--otherText);    
+}
