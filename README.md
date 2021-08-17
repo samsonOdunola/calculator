@@ -1,4 +1,5 @@
 # Frontend Mentor - Jola Calculator app
+## Local development
 
 ![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)
 
